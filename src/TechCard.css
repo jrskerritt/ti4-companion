@@ -51,7 +51,7 @@
 }
 
 .tech-card.yellow .tech-card__rank-dot {
-    background-color: rgba(255,255,0,0.5);
+    background-color: rgba(225,240,0,0.5);
 }
 
 .tech-card.blue .tech-card__rank-dot {
