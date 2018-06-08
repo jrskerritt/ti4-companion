@@ -15,7 +15,7 @@ const fleetLogistics = {
 }
 
 const lightWaveDeflector = {
-    name: 'light / Wave Deflector',
+    name: 'Light / Wave Deflector',
     value: 'Your ships can move through systems that contain other player’s ships'
 }
 

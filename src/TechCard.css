@@ -1,0 +1,58 @@
+.tech-card {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+    justify-content: space-between;
+    padding: 15px;
+    width: 275px;
+}
+
+.tech-card__description {
+    font-size: 12px;
+}
+
+.tech-card.green {
+    background-color: rgba(0,255,0,0.05);
+}
+
+.tech-card.red {
+    background-color: rgba(255,0,0,0.05);
+}
+
+.tech-card.yellow {
+    background-color: rgba(255,255,0,0.1);
+}
+
+.tech-card.blue {
+    background-color: rgba(0,100,255,0.05);
+}
+
+.tech-card__rank {
+    font-size: 12px;
+    text-align: right;
+}
+
+.tech-card__rank-dot {
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+}
+
+.tech-card.green .tech-card__rank-dot {
+    background-color: rgba(0,255,0,0.5);
+}
+
+.tech-card.red .tech-card__rank-dot {
+    background-color: rgba(255,0,0,0.5);
+}
+
+.tech-card.yellow .tech-card__rank-dot {
+    background-color: rgba(255,255,0,0.5);
+}
+
+.tech-card.blue .tech-card__rank-dot {
+    background-color: rgba(0,100,255,0.5);
+}
