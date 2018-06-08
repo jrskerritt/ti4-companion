@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TechCard from './TechCard';
 import * as techCards from './cardData/techCards';
+import './Tech.css';
 
 class Tech extends Component {
     render() {
