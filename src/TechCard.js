@@ -17,10 +17,37 @@ class TechCard extends Component {
                     {this.props.description}
                 </div>
                 <div className="tech-card__rank">
-                    {this.props.rank > 0 ? rankDots : 'Basic'}
+                    {this.props.prereqs ?
+                        this._getPrereqDots(this.props.prereqs) :
+                        this.props.rank > 0 ? rankDots : 'Basic'
+                    }
                 </div>
             </div>
         );
+    }
+
+    _getPrereqDots(prereqString) {
+        let dots = [];
+        for (var i = 0; i < prereqString.length; i++) {
+            switch (prereqString[i]) {
+                case 'R':
+                    dots.push(<div key={i} className="tech-card__rank-dot tech-card__rank-dot--R" />);
+                    break;
+                case 'G':
+                    dots.push(<div key={i} className="tech-card__rank-dot tech-card__rank-dot--G" />);
+                    break;
+                case 'Y':
+                    dots.push(<div key={i} className="tech-card__rank-dot tech-card__rank-dot--Y" />);
+                    break;
+                case 'B':
+                    dots.push(<div key={i} className="tech-card__rank-dot tech-card__rank-dot--B" />);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        return dots;
     }
 }
 

@@ -19,3 +19,5 @@ export const raceTechDictionary = {
     'The Lizix Mindnet': raceTech.lizixMindset,
     'The Federation of Sol': raceTech.federationOfSol
 }
+
+export default raceTechDictionary;
