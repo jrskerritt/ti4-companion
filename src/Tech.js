@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TechCard from './TechCard';
 import * as techCards from './cardData/techCards';
+import races from './cardData/races';
 import './Tech.css';
 
 class Tech extends Component {
@@ -51,6 +52,22 @@ class Tech extends Component {
                 </div>
                 <div className="tech__racial">
                     <h3>Racial Tech</h3>
+                    {Object.keys(races).map(race =>
+                        <div key={race}>
+                            <h4>{race}</h4>
+                            <div className="tech__list">
+                                {Object.keys(races[race]).map(rank =>
+                                    <TechCard
+                                        key={races[race][rank].name}
+                                        color="gray"
+                                        prereqs={races[race][rank].req}
+                                        name={races[race][rank].name}
+                                        description={races[race][rank].value}
+                                    />
+                                )}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         );
